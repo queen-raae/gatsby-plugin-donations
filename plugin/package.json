@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/queen-raae/gatsby-plugin-donations#readme",
   "devDependencies": {},
-  "dependencies": {},
+  "dependencies": {
+    "stripe": "8.191.0"
+  },
   "peerDependencies": {
     "gatsby": "^3.0.0 || ^4.0.0"
   }
