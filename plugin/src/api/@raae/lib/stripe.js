@@ -2,7 +2,7 @@ import Stripe from "stripe";
 import {
   STRIPE_PRODUCT_ID,
   STRIPE_SECRET_KEY,
-  STRIPE_PAYMENT_TYPES,
+  STRIPE_PAYMENT_METHODS,
   STRIPE_CURRENCY,
   STRIPE_PRODUCT_NAME,
   STRIPE_PRODUCT_DESCRIPTION,
@@ -11,10 +11,10 @@ import {
 export default ({
   secretKey = STRIPE_SECRET_KEY,
   productId = STRIPE_PRODUCT_ID,
-  paymentTypes = STRIPE_PAYMENT_TYPES || "card",
+  paymentTypes = STRIPE_PAYMENT_METHODS || "card",
   currency = STRIPE_CURRENCY || "USD",
   productName = STRIPE_PRODUCT_NAME || "Donation",
-  productDescription = STRIPE_PRODUCT_DESCRIPTION || "Donation",
+  productDescription = STRIPE_PRODUCT_DESCRIPTION,
 } = {}) => {
   const stripe = Stripe(secretKey);
   paymentTypes = paymentTypes.split(",").map((type) => type.trim());
