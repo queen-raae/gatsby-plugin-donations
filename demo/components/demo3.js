@@ -3,7 +3,7 @@ import axios from "axios";
 import { loadStripe } from "@stripe/stripe-js";
 
 const stripePromise = loadStripe(
-  process.env.GATSBY_RAAE_PLUGIN_DONATIONS_STRIPE_PUBLISHABLE_KEY
+  process.env.GATSBY_RAAE_GATSBY_PLUGIN_DONATIONS_STRIPE_PUBLISHABLE_KEY
 );
 
 const CURRENCY =

@@ -6,6 +6,7 @@ import {
   STRIPE_CURRENCY,
   STRIPE_PRODUCT_NAME,
   STRIPE_PRODUCT_DESCRIPTION,
+  STRIPE_AMOUNT_MULTIPLIER,
 } from "./constants";
 
 export default ({
@@ -13,6 +14,7 @@ export default ({
   productId = STRIPE_PRODUCT_ID,
   paymentTypes = STRIPE_PAYMENT_METHODS || "card",
   currency = STRIPE_CURRENCY || "USD",
+  multiplier = STRIPE_AMOUNT_MULTIPLIER || 100,
   productName = STRIPE_PRODUCT_NAME || "Donation",
   productDescription = STRIPE_PRODUCT_DESCRIPTION,
 } = {}) => {
@@ -35,7 +37,7 @@ export default ({
         {
           price_data: {
             currency: currency,
-            unit_amount: amount * 100,
+            unit_amount: amount * parseInt(multiplier, 10),
             product: productId,
             product_data: !productId && {
               name: productName,
