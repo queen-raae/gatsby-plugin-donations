@@ -26,7 +26,7 @@ export default ({
   };
 
   const createSession = async ({ amount, metadata, successUrl, cancelUrl }) => {
-    log("createSession", metadata);
+    log("createSession", amount, metadata);
 
     // Stripe docs: https://stripe.com/docs/api/checkout/sessions/create
     const session = await stripe.checkout.sessions.create({
