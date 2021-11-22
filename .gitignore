@@ -11,6 +11,10 @@ yarn-error.log*
 # Yarn (not npm)
 package-lock.json
 
+# Env
+.env.*
+!.env.example
+
 # Gatsby cache and public
 .cache
 public/
