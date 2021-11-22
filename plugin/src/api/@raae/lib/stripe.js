@@ -26,7 +26,21 @@ export default ({
   };
 
   const createSession = async ({ amount, metadata, successUrl, cancelUrl }) => {
-    log("createSession", amount, metadata);
+    log("createSession", amount, metadata, productId);
+
+    const priceData = {
+      currency: currency,
+      unit_amount: amount * parseInt(multiplier, 10),
+    };
+
+    if (productId) {
+      priceData.product = productId;
+    } else {
+      priceData.product_data = {
+        name: productName,
+        description: productDescription,
+      };
+    }
 
     // Stripe docs: https://stripe.com/docs/api/checkout/sessions/create
     const session = await stripe.checkout.sessions.create({
@@ -35,15 +49,7 @@ export default ({
       payment_method_types: paymentTypes,
       line_items: [
         {
-          price_data: {
-            currency: currency,
-            unit_amount: amount * parseInt(multiplier, 10),
-            product: productId,
-            product_data: !productId && {
-              name: productName,
-              description: productDescription,
-            },
-          },
+          price_data: priceData,
           quantity: 1,
         },
       ],
