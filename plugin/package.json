@@ -1,6 +1,6 @@
 {
   "name": "@raae/gatsby-plugin-donations",
-  "version": "1.4.0",
+  "version": "1.0.0-next.1",
   "author": "@raae",
   "description": "A Gatsby Plugin for accepting donations through Stripe 💰",
   "keywords": [
