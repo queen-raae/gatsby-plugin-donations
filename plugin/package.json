@@ -1,8 +1,8 @@
 {
-  "name": "@raae/gatsby-plugin-starter",
+  "name": "@raae/gatsby-plugin-donations",
   "version": "1.4.0",
   "author": "@raae",
-  "description": "An awsome plugin from @raae that will solve all your problems 🤪",
+  "description": "A Gatsby Plugin for accepting donations through Stripe 💰",
   "keywords": [
     "gatsby",
     "gatsby-plugin"
@@ -16,13 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/queen-raae/gatsby-plugin-starter.git"
+    "url": "git+https://github.com/queen-raae/gatsby-plugin-donations.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/queen-raae/gatsby-plugin-starter/issues"
+    "url": "https://github.com/queen-raae/gatsby-plugin-donations/issues"
   },
-  "homepage": "https://github.com/queen-raae/gatsby-plugin-starter#readme",
+  "homepage": "https://github.com/queen-raae/gatsby-plugin-donations#readme",
   "devDependencies": {},
   "dependencies": {},
   "peerDependencies": {
