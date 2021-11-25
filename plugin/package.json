@@ -28,6 +28,6 @@
     "stripe": "8.191.0"
   },
   "peerDependencies": {
-    "gatsby": "^3.0.0 || ^4.0.0"
+    "gatsby": "^3.7.0 || ^4.0.0"
   }
 }

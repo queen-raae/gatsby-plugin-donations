@@ -15,7 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@raae/gatsby-plugin-donations": "*",
+    "@raae/gatsby-plugin-donations": "file:../plugin",
     "@stripe/stripe-js": "1.21.1",
     "axios": "0.24.0",
     "gatsby": "4.1.4",

@@ -1642,6 +1642,11 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
+"@raae/gatsby-plugin-donations@file:plugin":
+  version "1.0.0-alpha"
+  dependencies:
+    stripe "8.191.0"
+
 "@semantic-release/changelog@6.0.1":
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/@semantic-release/changelog/-/changelog-6.0.1.tgz#8dd0334fd8c7d50cda747d2591e4f18f816b3c9c"

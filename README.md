@@ -20,7 +20,11 @@ or
 
 ## How to configure
 
+Add `gatsby-plugin-donations` to the plugin array in `gatsby-config.js`.
+
 ```
+// gatsby-config.js
+
 module.exports = {
   plugins: [
     `@raae/gatsby-plugin-donations`
