@@ -13,6 +13,9 @@ const stripe = Stripe();
 export default async (req, res) => {
   console.log(`${req.baseUrl} - ${req.method}`);
 
+  // The api_key is available on process.env because it's set in gatsby-node => onPreInit
+  console.log("process.env.api_key: ", process.env.api_key);
+
   try {
     if (req.method === "POST") {
       await createStripeSession(req, res);
